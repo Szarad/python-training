@@ -1,0 +1,44 @@
+Python training course
+===
+1.  magic number 
+hardcode values
+
+2. decorators @
+@D 
+def (or class) F()
+
+
+@D ==  F=D(F)
+
+3. *args -> bind name args to tuple
+collecting remianing positionala arguments to tuple
+
+
+collect remaining positional arguments into a tuple and bind it to the name (expected to be args) which follows the * 
+
+bind - association between bindable location (name, element of the list, element of dictionary) object.
+
+keywords arguments - **
+
+collect remaining keyword arguments into a dict and bind it to the name (expected to be kwargs) which follows the ** 
+
+
+(3)- integer 3
+(3,) - tuple containing 3
+4. test driven development
+- standard library: unitest 
+- pytest -> better
+
+convencion:
+test_*.py inside function test_ or class T_
+*_test.py
+
+pytest with couples results use tuples
+
+pytest -v --tb=line
+
+pytest -k fibi -run more specific test
+
+
+5 property based testing
+- hypotesys
