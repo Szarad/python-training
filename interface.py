@@ -12,24 +12,20 @@ if sys.argv[1] == 'tk':
         w.pack()
        # x,y = w.winfo_height() / 2, w.winfo_width() / 2
         #vx, vy = 80.0, 150.0
-		r=60
-		
-		p = Particle(r,(w.winfo_height() / 2, w.winfo_width() / 2), (80.0,150.0))
+        r=60
+        
+        p = Particle(r,(w.winfo_height() / 2, w.winfo_width() / 2), (80.0,150.0))
         particle = w.create_oval(x,y, 60,60, outline='yellow')
         def update(dt):
-				w.delete(tk.ALL)
-				p.move(dt)			
-				p.bounce((0, w.winfo_width(),0,w.info_height()))
-				draw_particle(w,p)
-				w.update()
-				w.after(int(100/fps), update, 1/fps)
+                w.delete(tk.ALL)
+                p.move(dt)            
+                p.bounce((0, w.winfo_width(),0,w.info_height()))
+                draw_particle(w,p)
+                w.update()
+                w.after(int(100/fps), update, 1/fps)
         update(0)
 
         tk.mainloop()
-
-
-
-
 else:
         radius = 30
         constant_angel = 20
@@ -82,5 +78,4 @@ else:
                         vy = - vy
 
         pyglet.clock.schedule_interval(update, 1/60.0)
-
         pyglet.app.run()
