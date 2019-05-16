@@ -9,6 +9,8 @@ class Vector:
            return self.x
        else:
            return self.y
+       #raise IndexError
+
    def __setitem__(self,n,v):
        if n==0:
            self.x = v
@@ -28,6 +30,7 @@ class Vector:
    def __neg__(self):
        return Vector(-self.x, -self.y)
    def __abs__(self):
+       # x,y = self 
        return sqrt(self.x*self.x + self.y*self.y)
   
 
